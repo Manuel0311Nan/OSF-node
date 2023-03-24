@@ -4,7 +4,7 @@ import { getAllAbout, createAbout, getAboutById, deleteAbout } from "../controll
 const aboutRoutes = express.Router();
 
 aboutRoutes.get('/', getAllAbout);
-aboutRoutes.put('/create', createAbout);
+aboutRoutes.post('/createCrewOSFthebestteam', createAbout);
 aboutRoutes.get('/:id', getAboutById);
 aboutRoutes.delete('/:id', deleteAbout);
 

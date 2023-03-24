@@ -34,10 +34,11 @@ server.use("/about", aboutRoutes)
 
 
 server.use('*', (req, res, next) => {
-    const error = new Error('Route not found');
-    error.status = 404;
+    const error = new Error('Route not founded');
+    error.status = 408;
     next(error);
-  });
+});
+  
   server.use((err, req, res, next) => {
     return res.status(err.status || 500).json(err.message || 'Unexpected error');
   });

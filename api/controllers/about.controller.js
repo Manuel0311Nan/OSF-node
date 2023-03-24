@@ -4,7 +4,7 @@ import { httpStatusCode } from "../../utils/httpStatusCode.js";
 const getAllAbout = async (req, res, next) => {
     try {
         const about = await About.find().populate();
-        return res.json(200).json(about);
+        return res.json(about)
     } catch (error) {
         return next(error)
     }
