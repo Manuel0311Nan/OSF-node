@@ -9,7 +9,7 @@ const showsSchema = new Schema(
         group1: { type: String, required: false },
         group2: { type: String, required: false },
         group3: { type: String, required: false },
-        date: { type: Date, required: true },
+        date: { type: String, required: true },
         image: { type: String, required: true },
         coordinates: {type: Array,required: true}
 
