@@ -5,9 +5,10 @@ import { connection } from "./config/database.js";
 import cors from "cors";
 import logger from "morgan";
 
+//Rutas de los diferentes modelos
 import { aboutRoutes } from "./api/routes/about.routes.js";
 import { showRoutes } from "./api/routes/show.routes.js";
-
+import { photoRoutes } from "./api/routes/photo.routes.js";
 connection();
 dotenv.config();
 
@@ -33,6 +34,7 @@ server.use(cors("*"));
 server.use('/', router);
 server.use("/about", aboutRoutes)
 server.use("/shows", showRoutes)
+server.use("/photos", photoRoutes);
 
 
 

@@ -45,12 +45,12 @@ const editShow = async (req, res, next) => {
 
     const showPhoto = req.image;// me traigo la url de la foto
     const bodyData = req.body;
-  
+
     if (showPhoto) { bodyData.image = showPhoto }
-    const { id: showId } = req.authority;
+    const { id } = req.params;
   
     try {
-      const show = await Shows.findById(showId)
+      const show = await Shows.findById(id)
       const showModify = new Shows(bodyData);
   
       //Para evitar que se modifique el id de mongo:
@@ -61,7 +61,7 @@ const editShow = async (req, res, next) => {
       //retornamos respuesta de  los datos del objeto creado 
       return res.json({
         status: 200,
-        message: httpStatusCode[200],
+        message: [httpStatusCode[200]],
         data: { show: showModify },
       });
     } catch (error) {

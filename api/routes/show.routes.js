@@ -6,7 +6,7 @@ const showRoutes = express.Router();
 showRoutes.get('/', getAllShows);
 showRoutes.post('/create', createShow);
 showRoutes.get('/:id', getShowById);
-showRoutes.put('/edit', editShow);
+showRoutes.put('/edit/:id', editShow);
 showRoutes.delete('/:id', deleteShow);
 
 export {showRoutes}
