@@ -7,7 +7,7 @@ const aboutSchema = new Schema(
         name: { type: String, required: true },
         city: { type: String, required: true },
         instrument: { type: String, required: true },
-        date: { type: String, required: true },
+        date: { type: Date, required: true },
         image: { type: String, required: true },
     },
     {
