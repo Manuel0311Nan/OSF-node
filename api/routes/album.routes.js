@@ -3,7 +3,7 @@ import { getAllAlbums, createAlbum, getAlbumById } from "../controllers/album.co
 
 const albumRoutes = express.Router();
 
-albumRoutes.get('/', createAlbum);
+albumRoutes.get('/', getAllAlbums);
 albumRoutes.post('/createAlbumOSFNew', createAlbum);
 albumRoutes.get('/:id', getAlbumById);
 
