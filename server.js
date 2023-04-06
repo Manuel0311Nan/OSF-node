@@ -37,7 +37,7 @@ server.use('/', router);
 server.use("/about", aboutRoutes)
 server.use("/shows", showRoutes)
 server.use("/photos", photoRoutes);
- server.use("/albums", albumRoutes);
+server.use("/albums", albumRoutes);
 
 
 

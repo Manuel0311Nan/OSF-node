@@ -1,5 +1,5 @@
 import express from "express";
-import { getAllAlbums, createAlbum, getAlbumById } from "../controllers/album.controller";
+import { getAllAlbums, createAlbum, getAlbumById } from "../controllers/album.controller.js";
 
 const albumRoutes = express.Router();
 
