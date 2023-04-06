@@ -9,6 +9,8 @@ import logger from "morgan";
 import { aboutRoutes } from "./api/routes/about.routes.js";
 import { showRoutes } from "./api/routes/show.routes.js";
 import { photoRoutes } from "./api/routes/photo.routes.js";
+import { albumRoutes } from "./api/routes/album.routes.js";
+
 connection();
 dotenv.config();
 
@@ -35,6 +37,7 @@ server.use('/', router);
 server.use("/about", aboutRoutes)
 server.use("/shows", showRoutes)
 server.use("/photos", photoRoutes);
+ server.use("/albums", albumRoutes);
 
 
 
