@@ -10,6 +10,7 @@ import { aboutRoutes } from "./api/routes/about.routes.js";
 import { showRoutes } from "./api/routes/show.routes.js";
 import { photoRoutes } from "./api/routes/photo.routes.js";
 import { albumRoutes } from "./api/routes/album.routes.js";
+import { newsRoutes } from "./api/routes/news.routes.js";
 
 connection();
 dotenv.config();
@@ -33,11 +34,14 @@ server.use(express.urlencoded({ extended: true }));
 server.use(cors("*"));
 
 
+//Rutas para diferentes los diferentes modelos
+
 server.use('/', router);
 server.use("/about", aboutRoutes)
 server.use("/shows", showRoutes)
 server.use("/photos", photoRoutes);
 server.use("/albums", albumRoutes);
+server.use("/news", newsRoutes);
 
 
 
