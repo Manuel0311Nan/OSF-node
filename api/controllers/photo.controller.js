@@ -13,11 +13,13 @@ const getAllPhoto = async (req, res, next) => {
 const createPhoto = async (req, res, next) =>{
     try {
         const { body } = req;
+        
         const newPhoto = new Photo({
             city: body.city,
             date: body.date,
             image: body.image
         });
+
         const savedPhoto = await newPhoto.save();
         return res.json({
             status: 201,

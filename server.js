@@ -5,6 +5,8 @@ import { connection } from "./config/database.js";
 import cors from "cors";
 import logger from "morgan";
 
+import fileUpload from "express-fileupload";
+
 //Rutas de los diferentes modelos
 import { aboutRoutes } from "./api/routes/about.routes.js";
 import { showRoutes } from "./api/routes/show.routes.js";
@@ -32,7 +34,10 @@ server.use(logger('dev'));
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(cors("*"));
-
+server.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: './uploads'
+}))
 
 //Rutas para diferentes los diferentes modelos
 
